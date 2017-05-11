@@ -42,6 +42,12 @@ class SaleOrder(models.Model):
         comodel_name='project.project', string='Project',
         compute='_compute_related_project_id')
 
+    @api.onchange('related_project_id')
+    def _onchange_related_project_id(self):
+        if not self.project_id:
+            self.project_id = self.related_project_id and \
+                self.related_project_id.analytic_account_id.id
+
     @api.model
     def _prepare_project_vals(self, order):
         name = u" %s - %s - %s" % (
