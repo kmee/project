@@ -4,6 +4,8 @@
 from odoo import http, _
 from odoo.http import request
 from odoo.addons.website_form.controllers.main import WebsiteForm
+from odoo.addons.website_portal.controllers.main import website_account
+
 
 
 class WebsiteForm(WebsiteForm):
@@ -22,11 +24,25 @@ class WebsiteForm(WebsiteForm):
                 request.env.context, show_address=True, no_tag_br=True)
         )
 
+        projects = request.env['project.project'].search([('privacy_visibility', '=', 'portal')])
+
+        # project_filters = {
+        #     'all': {'label': _('All'), 'domain': []},
+        # }
+        #
+        # for proj in projects:
+        #     project_filters.update({
+        #         str(proj.id): {'label': proj.name, 'domain': [('project_id', '=', proj.id)]}
+        #
+        #     })
+
+        #domain = [('project_id.privacy_visibility', '=', 'portal')]
+        #domain += project_filters.get(project, project_filters['all'])['domain']
+
         # Render page
-        return request.render("website_task.new-task")
+        return request.render("website_task.new-task", {"project_filters": projects})
 
     # Redirect to success page
     @http.route("/task-thank-you", type="http", auth="user", website=True)
     def task_tank_you(self, **kw):
         return request.render("website_task.task-thank-you")
-

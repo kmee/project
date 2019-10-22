@@ -86,14 +86,37 @@
                                           class="s_website_form container-fluid mt32"
                                           enctype="multipart/form-data"
                                           data-editable-form="false">
-                                        <div class="form-group row form-field o_website_form_required_custom">
-                                           <label for="mail_addresses" class="col-lg-3 col-md-4 col-form-label">
-                                               E-mail: 
-                                            </label>
-                                            <div>
-                                                <span t-esc="request.env.user.email" name="mail_addresses"></span>
-                                            </div>
-                                        </div>
+                                          <div class="form-group row form-field o_website_form_required_custom">
+                                             <label for="mail_addresses" class="col-lg-3 col-md-4 col-form-label">
+                                                 E-mail:
+                                              </label>
+                                              <div>
+                                                  <div class="col-lg-7 col-md-8">
+                                                      <input type="text"
+                                                             class="form-control o_website_form_input"
+                                                             name="mail_addresses"
+                                                             t-att-value="request.env.user.email"
+                                                             required=""
+                                                             readonly="1" />
+                                                  </div>
+
+                                              </div>
+                                          </div>
+                                          <div class="form-group row form-field o_website_form_required_custom">
+                                             <label for="project_id" class="col-lg-3 col-md-4 col-form-label">
+                                                 Project:
+                                              </label>
+                                              <div>
+                                                  <div class="col-lg-7 col-md-8">
+                                                    <select class="form-control" name="project_id">
+                                                       <t t-foreach="project_filters" t-as="project">
+                                                            <option t-attf-value="#{project.id}"><t t-esc="project.name"/></option>
+                                                       </t>
+                                                   </select>
+                                                  </div>
+
+                                              </div>
+                                          </div>
 
                                         <div class="form-group row form-field o_website_form_required_custom">
                                             <label class="col-lg-3 col-md-4 col-form-label"
@@ -104,7 +127,7 @@
                                                        class="form-control o_website_form_input"
                                                        name="name"
                                                        t-att-value="request.params.get('name', '')"
-                                                       required=""/>
+                                                       required="" />
                                             </div>
                                         </div>
 

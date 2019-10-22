@@ -12,6 +12,7 @@
                 'description',
                 'name',
                 'mail_addresses',
+                'project_id'
             ]"/>
         </function>
     </data>
