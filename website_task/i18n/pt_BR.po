@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-21 14:53+0000\n"
-"PO-Revision-Date: 2019-10-21 11:54-0300\n"
+"POT-Creation-Date: 2019-10-23 02:34+0000\n"
+"PO-Revision-Date: 2019-10-22 23:35-0300\n"
 "Last-Translator: Ananias Filho <ananias@kmee.cocm.br>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -29,8 +29,18 @@ msgstr "Anexo"
 
 #. module: website_task
 #: model:ir.ui.view,arch_db:website_task.new-task
-msgid "Description"
+msgid "Description:"
 msgstr "Descrição"
+
+#. module: website_task
+#: model:ir.ui.view,arch_db:website_task.new-task
+msgid "E-mail:"
+msgstr "E-mail:"
+
+#. module: website_task
+#: model:ir.ui.view,arch_db:website_task.new-task
+msgid "High"
+msgstr "Alta"
 
 #. module: website_task
 #: model:ir.ui.view,arch_db:website_task.task-thank-you
@@ -42,7 +52,18 @@ msgstr ""
 "                                    entrar em contato pelo telefone:"
 
 #. module: website_task
+#: model:ir.ui.view,arch_db:website_task.new-task
+msgid "Low"
+msgstr "Baixa"
+
+#. module: website_task
+#: model:website.menu,name:website_task.menu_my_tasks
+msgid "My Tasks"
+msgstr "Meus tickets"
+
+#. module: website_task
 #: model:ir.actions.act_url,name:website_task.action_open_website
+#: model:website.menu,name:website_task.menu_new_task
 msgid "New Task"
 msgstr "Novo Ticket"
 
@@ -50,6 +71,11 @@ msgstr "Novo Ticket"
 #: model:ir.ui.view,arch_db:website_task.new-task
 msgid "New Ticket"
 msgstr "Novo Ticket"
+
+#. module: website_task
+#: model:ir.ui.view,arch_db:website_task.new-task
+msgid "Normal"
+msgstr "Normal"
 
 #. module: website_task
 #: model:ir.ui.view,arch_db:website_task.new-task
@@ -62,6 +88,16 @@ msgstr "Por favor, preencha todos os campos para criar um novo Ticket."
 
 #. module: website_task
 #: model:ir.ui.view,arch_db:website_task.new-task
+msgid "Priority:"
+msgstr "Prioridade:"
+
+#. module: website_task
+#: model:ir.ui.view,arch_db:website_task.new-task
+msgid "Project:"
+msgstr "Projeto:"
+
+#. module: website_task
+#: model:ir.ui.view,arch_db:website_task.new-task
 msgid "Send"
 msgstr "Enviar"
 
@@ -71,14 +107,19 @@ msgid "Subject:"
 msgstr "Assunto:"
 
 #. module: website_task
-#: model:website.menu,name:website_task.menu_new_task
-msgid "Task"
+#: model:website.menu,name:website_task.menu_tasks
+msgid "Tasks"
 msgstr "Ticket"
 
 #. module: website_task
 #: model:ir.ui.view,arch_db:website_task.task-thank-you
 msgid "Thanks!"
 msgstr "Obrigado!"
+
+#. module: website_task
+#: model:ir.ui.view,arch_db:website_task.new-task
+msgid "Very High"
+msgstr "Urgente"
 
 #. module: website_task
 #: model:ir.ui.view,arch_db:website_task.task-thank-you
