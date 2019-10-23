@@ -24,7 +24,7 @@ class WebsiteForm(WebsiteForm):
                 request.env.context, show_address=True, no_tag_br=True)
         )
 
-        projects = request.env['project.project'].search([('privacy_visibility', '=', 'portal')])
+        projects = request.env['project.project'].search([('privacy_visibility', '=', 'portal'),('use_tasks', '=', True)])
 
         # Render page
         return request.render("website_task.new-task", {"project_filters": projects})
