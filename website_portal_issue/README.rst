@@ -8,7 +8,8 @@ Website Portal Issue
 
 This module enable portal users and project followers to create project issue from website portal.
 
-Compatible with odoo community.
+* Compatible with odoo community.
+* If  portal user is a follower of more than one project, can choose the project they want to create new issue.
 
 .. figure:: static/description/new_issue_screen.png
 
