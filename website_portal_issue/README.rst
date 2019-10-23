@@ -35,10 +35,6 @@ To configure this module, you need to:
 
 .. figure:: static/description/project_settings.png
 
-Known issues / Roadmap
-======================
-
-* ...
 
 Bug Tracker
 ===========
