@@ -9,7 +9,9 @@ from odoo.addons.website_form.controllers.main import WebsiteForm
 class WebsiteForm(WebsiteForm):
     # Check and insert values from the form on the model <model>
 
-    @http.route('/website_form/<string:model_name>', type='http', auth="user", methods=['POST'], website=True)
+    @http.route('/website_form/<string:model_name>', type='http', auth="user",
+            methods=['POST'], website=True
+        )
     def website_form(self, model_name, **kwargs):
         if model_name == 'project.issue' and not request.params.get('state'):
             pass
@@ -18,9 +20,13 @@ class WebsiteForm(WebsiteForm):
     @http.route(['/issue/new'], type='http', auth="user", website=True)
 
     def issue(self, country=None, department=None, office_id=None, **kwargs):
-        projects = request.env['project.project'].search([('privacy_visibility', '=', 'portal'),('use_issues', '=', True)])
+        projects = request.env['project.project'].search([
+            ('privacy_visibility', '=', 'portal'),('use_issues', '=', True)
+            ])
         # Render page
-        return request.render("website_portal_issue.new-issue", {"project_filters": projects})
+        return request.render("website_portal_issue.new-issue", {
+            "project_filters": projects
+            })
     # Redirect to success page
 
     @http.route("/issue-thank-you", type="http", auth="user", website=True)
