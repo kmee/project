@@ -21,7 +21,7 @@ class WebsiteForm(WebsiteForm):
 
     def issue(self, country=None, department=None, office_id=None, **kwargs):
         projects = request.env['project.project'].search([
-            ('privacy_visibility', '=', 'portal'),('use_issues', '=', True)
+            ('privacy_visibility', '=', 'portal'), ('use_issues', '=', True)
             ])
         # Render page
         return request.render("website_portal_issue.new-issue", {
