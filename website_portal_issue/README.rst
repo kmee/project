@@ -19,7 +19,7 @@ Create Issue
 
 Backend issue view
 ==================
-.. figure:: static/description/new_issue_screen.png
+.. figure:: static/description/backend_issue.png
 Installation
 ============
 
