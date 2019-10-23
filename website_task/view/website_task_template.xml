@@ -164,7 +164,7 @@
                                             </div>
                                             <div class="col-lg-7 col-md-8" style="margin-top: 15px;">
                                                 <input type="file"
-                                                       class="form-control o_website_form_input"
+                                                       class="form-control o_website_form_input" multiple="true"
                                                        name="attachment"/>
                                             </div>
                                         </div>

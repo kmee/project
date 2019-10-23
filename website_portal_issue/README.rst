@@ -20,6 +20,7 @@ Create Issue
 Backend issue view
 ==================
 .. figure:: static/description/backend_issue.png
+
 Installation
 ============
 
@@ -33,7 +34,6 @@ To configure this module, you need to:
 #. Enable issue on Project Configuration
 
 .. figure:: static/description/project_settings.png
-
 
 Known issues / Roadmap
 ======================
