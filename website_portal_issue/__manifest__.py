@@ -14,6 +14,7 @@
         'website_form',
         'website_partner',
         'project',
+        'website_project',
     ],
     'data': [
         'data/website_data.xml',

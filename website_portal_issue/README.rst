@@ -2,43 +2,31 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-============
-Website Task
-============
+====================
+Website Portal Issue
+====================
 
-Create tasks from website
+This module enable portal users and project followers to create project issue from website portal.
+
+Compatible with odoo community.
+
+.. figure:: static/description/new_issue_screen.png
+
 
 Installation
 ============
 
-To install this module, you need to:
-
-#. Do this ...
+To install this module, you just need click on install.
 
 Configuration
 =============
 
 To configure this module, you need to:
 
-#. Go to ...
+#. Enable issue on Project Configuration
 
-.. figure:: path/to/local/image.png
-   :alt: alternative description
-   :width: 600 px
+.. figure:: static/description/project_settings.png
 
-Usage
-=====
-
-To use this module, you need to:
-
-#. Go to ...
-
-.. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
-   :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/{repo_id}/{branch}
-
-.. repo_id is available in https://github.com/OCA/maintainer-tools/blob/master/tools/repos_with_ids.txt
-.. branch is "8.0" for example
 
 Known issues / Roadmap
 ======================
@@ -63,17 +51,15 @@ Images
 
 Contributors
 ------------
-
-* Firstname Lastname <email.address@example.org>
-* Second Person <second.person@example.org>
+* Ananias Filho <ananias@kmee.com.br>
+* Luis Felipe Miléo <mileo@kmee.com.br>
 
 Funders
 -------
 
 The development of this module has been financially supported by:
 
-* Company 1 name
-* Company 2 name
+* KMEE | kmee.com.br
 
 Maintainer
 ----------
