@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <template id="task-thank-you" name="Task Thank You">
+        <template id="issue-thank-you" name="issue Thank You">
             <t t-call="website.layout">
                 <div id="wrap">
                     <div class="oe_structure"/>
@@ -44,8 +44,7 @@
                 </div>
             </t>
         </template>
-
-        <template id="new-task" name="New Ticket" page="True">
+        <template id="new-issue" name="New issue" page="True">
             <t t-call="website.layout">
                 <div id="wrap">
                     <div class="oe_structure">
@@ -53,7 +52,7 @@
                             <div class="container">
                                 <div class="row s_nb_column_fixed">
                                     <div class="col-lg-12 s_title pt16 pb16">
-                                        <h1>New Ticket</h1>
+                                        <h1>New issue</h1>
                                     </div>
                                 </div>
                             </div>
@@ -70,7 +69,7 @@
                                                     <p>Please fill all
                                                         the fields to
                                                         create a new
-                                                        Ticket
+                                                        issue
                                                     </p>
                                                 </div>
                                             </div>
@@ -81,20 +80,20 @@
                                 <div>
                                     <form action="/website_form/"
                                           method="post"
-                                          data-model_name="project.task"
-                                          data-success_page="/task-thank-you"
+                                          data-model_name="project.issue"
+                                          data-success_page="/issue-thank-you"
                                           class="s_website_form container-fluid mt32"
                                           enctype="multipart/form-data"
                                           data-editable-form="false">
                                           <div class="form-group row form-field o_website_form_required_custom">
-                                             <label for="mail_addresses" class="col-lg-3 col-md-4 col-form-label">
+                                             <label for="email_from" class="col-lg-3 col-md-4 col-form-label">
                                                  E-mail:
                                               </label>
                                               <div>
                                                   <div class="col-lg-7 col-md-8">
                                                       <input type="text"
                                                              class="form-control o_website_form_input"
-                                                             name="mail_addresses"
+                                                             name="email_from"
                                                              t-att-value="request.env.user.email"
                                                              required=""
                                                              readonly="1" />
@@ -131,30 +130,45 @@
                                             </div>
                                         </div>
                                         <div class="form-group row form-field o_website_form_required_custom">
-                                                     <label class="col-lg-3 col-md-4 col-form-label"
-                                                            for="name">Priority:
-                                                     </label>
-                                                     <div class="col-lg-7 col-md-8">
-                                                         <select class="form-control" name="priority">
-                                                           <option value="0">Low</option>
-                                                           <option value="1">Normal</option>
-                                                           <option value="2">High</option>
-                                                           <option value="3">Very High</option>
-                                                         </select>
-                                                     </div>
-                                        </div>
-
-                                        <div class="form-group row form-field o_website_form_required_custom">
-                                                <label class="col-lg-3 col-md-4 col-form-label"
-                                                       for="description">
-                                                    Description:
-                                                </label>
+                                            <label class="col-lg-3 col-md-4 col-form-label"
+                                                   for="name">Priority:
+                                            </label>
                                             <div class="col-lg-7 col-md-8">
-                                                <textarea
-                                                        class="form-control o_website_form_input"
-                                                        name="description" style="max-width: 1150px;  width: 410px; height: 250px;"></textarea>
+                                                <select class="form-control" name="priority">
+                                                  <option value="0">Low</option>
+                                                  <option value="1">Normal</option>
+                                                  <option value="2">High</option>
+                                                </select>
                                             </div>
                                         </div>
+                                        <div class="form-group row form-field o_website_form_required_custom">
+                                            <label class="col-lg-3 col-md-4 col-form-label"
+                                                   for="name">service is unavailable?
+                                            </label>
+                                            <div class="col-lg-7 col-md-8">
+                                                <select class="form-control" name="is_unavailable">
+                                                  <option value="NO">No</option>
+                                                  <option value="YES">Yes</option>
+                                                  <option value="INTERMITENT">Intermitent</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group form-field">
+                                            <div class="col-md-3 col-sm-4 text-right">
+                                                <label class="control-label"
+                                                       for="description">
+                                                    Description
+                                                </label>
+                                            </div>
+                                            <div class="col-md-7 col-sm-8">
+                                                <textarea
+                                                        class="form-control o_website_form_input"
+                                                        name="description" style="max-width: 1150px;  width: 400px; height: 250px;"></textarea>
+                                            </div>
+                                        </div>
+
+
                                         <div class="form-group row form-field o_website_form_custom">
                                             <div class="col-lg-3 col-md-4 text-right" style="margin-top: 15px;">
                                                 <label class="col-form-label"
@@ -172,7 +186,7 @@
                                             <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
                                                 <a href="#"
                                                    role="button"
-                                                   class="btn btn-primary btn-sm o_website_form_send">
+                                                   class="btn btn-primary btn-lg o_website_form_send">
                                                     Send
                                                 </a>
                                                 <span id="o_website_form_result"></span>
