@@ -10,10 +10,16 @@ This module enable portal users and project followers to create project issue fr
 
 * Compatible with odoo community.
 * If  portal user is a follower of more than one project, can choose the project they want to create new issue.
+* An additional field "Service is unavailable" to increment description with information - Yes, No or Intermitent.
+
+Create Issue
+=============
 
 .. figure:: static/description/new_issue_screen.png
 
-
+Backend issue view
+==================
+.. figure:: static/description/new_issue_screen.png
 Installation
 ============
 
