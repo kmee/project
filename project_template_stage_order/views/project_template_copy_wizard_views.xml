@@ -8,6 +8,7 @@
                     <field name="template_id" invisible="1" />
                     <field name="name" />
                     <field name="link_to_template" />
+                    <field name="copy_tasks" />
                 </group>
                 <footer>
                     <button

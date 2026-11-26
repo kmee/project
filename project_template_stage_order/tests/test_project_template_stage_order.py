@@ -50,6 +50,26 @@ class TestProjectTemplateStageOrder(TestTemplateStageOrderCommon):
         copy = self._copy_template("Test No Tasks Copy")
         self.assertFalse(copy.task_ids)
 
+    def test_copy_tasks_without_assignees(self):
+        self.env["project.task"].create(
+            {
+                "name": "Test Task",
+                "project_id": self.template.id,
+                "stage_id": self.stage_new.id,
+                "user_ids": [(6, 0, self.env.user.ids)],
+            }
+        )
+        copy = self._copy_template("Test Tasks Copy", copy_tasks=True)
+        self.assertEqual(copy.task_ids.mapped("name"), ["Test Task"])
+        self.assertEqual(copy.task_ids.stage_id, self.stage_new)
+        self.assertFalse(copy.task_ids.user_ids)
+        self.assertEqual(self.template.task_ids.user_ids, self.env.user)
+
+    def test_linked_copy_records_origin_without_stage_order(self):
+        self.env.company.task_stage_order_enabled = False
+        copy = self._copy_template("Test Origin Copy", True, copy_tasks=True)
+        self.assertEqual(copy.template_id, self.template)
+
     def test_copy_copies_custom_stage_order(self):
         self._sequence_for(self.template, self.stage_new).write({"sequence": 50})
         self._sequence_for(self.template, self.stage_done).write({"sequence": 10})

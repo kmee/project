@@ -38,12 +38,13 @@ class TestTemplateStageOrderCommon(BaseCommon):
             [("project_id", "=", project.id), ("stage_id", "=", stage.id)]
         )
 
-    def _copy_template(self, name, link_to_template=False):
+    def _copy_template(self, name, link_to_template=False, copy_tasks=False):
         wizard = self.Wizard.create(
             {
                 "template_id": self.template.id,
                 "name": name,
                 "link_to_template": link_to_template,
+                "copy_tasks": copy_tasks,
             }
         )
         result = wizard.action_confirm()

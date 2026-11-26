@@ -9,5 +9,6 @@ made on the template is applied to every linked copy automatically, and
 linked copies cannot change their own stages. An independent copy behaves
 like any other project and keeps no link to the template.
 
-Tasks are never copied, whether the copy is linked or independent — only the
-stage structure is.
+Tasks are not copied unless **Copy tasks** is checked in the copy wizard; in
+that case they are copied without assignees. The stage structure is always
+copied.
