@@ -26,11 +26,11 @@ addon | version | maintainers | summary
 [project_crm_postsale_automation](project_crm_postsale_automation/) | 18.0.1.0.0 | <a href='https://github.com/ppyczko'><img src='https://github.com/ppyczko.png' width='32' height='32' style='border-radius:50%;' alt='ppyczko'/></a> | Automate recurring post-sale opportunities from projects
 [project_department](project_department/) | 18.0.1.0.0 |  | Project Department Categorization
 [project_forecast_line](project_forecast_line/) | 18.0.1.0.0 |  | Project Forecast Lines
-[project_group](project_group/) | 18.0.1.0.0 |  | Add groups for filtering on projects
+[project_group](project_group/) | 18.0.1.0.1 |  | Add groups for filtering on projects
 [project_group_hr_timesheet](project_group_hr_timesheet/) | 18.0.1.0.0 |  | This module makes project group work properly with timesheets
-[project_hr](project_hr/) | 18.0.1.0.2 | <a href='https://github.com/pedrobaeza'><img src='https://github.com/pedrobaeza.png' width='32' height='32' style='border-radius:50%;' alt='pedrobaeza'/></a> | Link HR with project
+[project_hr](project_hr/) | 18.0.1.0.3 | <a href='https://github.com/pedrobaeza'><img src='https://github.com/pedrobaeza.png' width='32' height='32' style='border-radius:50%;' alt='pedrobaeza'/></a> | Link HR with project
 [project_kanban_form_direct_access](project_kanban_form_direct_access/) | 18.0.1.0.0 |  | Project form view can now be accessed directly by clicking the project name.
-[project_key](project_key/) | 18.0.1.0.1 |  | Module decorates projects and tasks with Project Key
+[project_key](project_key/) | 18.0.1.0.2 |  | Module decorates projects and tasks with Project Key
 [project_merge](project_merge/) | 18.0.1.0.0 |  | Wizard to merge project tasks
 [project_milestone_status](project_milestone_status/) | 18.0.1.0.0 | <a href='https://github.com/lbarry-apsl'><img src='https://github.com/lbarry-apsl.png' width='32' height='32' style='border-radius:50%;' alt='lbarry-apsl'/></a> | Project Milestone Status
 [project_multi_department](project_multi_department/) | 18.0.1.0.0 |  | This module add a link between projects and several departments
@@ -62,7 +62,7 @@ addon | version | maintainers | summary
 [project_task_default_stage](project_task_default_stage/) | 18.0.1.0.1 |  | Recovery default task stages for projects from v8
 [project_task_default_user](project_task_default_user/) | 18.0.1.0.0 | <a href='https://github.com/NICO-SOLUTIONS'><img src='https://github.com/NICO-SOLUTIONS.png' width='32' height='32' style='border-radius:50%;' alt='NICO-SOLUTIONS'/></a> | Auto assign default users to tasks or when changing task stages
 [project_task_description_portal](project_task_description_portal/) | 18.0.1.0.0 |  | Dedicated task description for portal users
-[project_task_description_template](project_task_description_template/) | 18.0.1.0.0 |  | Add a description template to project tasks
+[project_task_description_template](project_task_description_template/) | 18.0.1.1.0 |  | Add a description template to project tasks
 [project_task_material](project_task_material/) | 18.0.1.0.0 |  | Record products spent in a Task
 [project_task_name_with_id](project_task_name_with_id/) | 18.0.1.0.1 |  | Project Task Name with ID
 [project_task_note](project_task_note/) | 18.0.1.0.2 | <a href='https://github.com/pilarvargas-tecnativa'><img src='https://github.com/pilarvargas-tecnativa.png' width='32' height='32' style='border-radius:50%;' alt='pilarvargas-tecnativa'/></a> | Add notes in project tasks
